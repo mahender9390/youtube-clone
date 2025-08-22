@@ -8,24 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             scrollbar-width: none;
-
-            /* .roboto-<uniquifier> {
-                font-family: "Roboto", sans-serif;
-                font-optical-sizing: auto;
-                font-weight: <weight>;
-                font-style: normal;
-                font-variation-settings:
-                    "wdth" 600;
-            } */
         }
 
         .container {
@@ -36,8 +23,9 @@
 
         .top {
             width: 84%;
-            height: 20%;
+            height: 16%;
             background-color: rgb(36, 36, 36);
+           
             position: fixed;
             top: 0;
             right: 0;
@@ -63,24 +51,21 @@
             display: flex;
             justify-content: start;
             align-items: center;
-            padding: 15px;
+            /* padding: 8px; */
             font-size: 20px;
-            width: 13.85%;
+            width: 16%;
             background-color: rgb(16, 16, 16);
             position: fixed;
             top: 0;
             left: 0;
-            color: white;
+            color:white;
             /* margin-bottom: 20px; */
         }
-
-
-
         .search {
             width: 50%;
             height: 38px;
             background-color: rgb(16, 16, 16);
-            border-radius: 15px;
+            border-radius: 20px;
             /* position: absolute;
             top: 0;
             left: 10%; */
@@ -89,13 +74,17 @@
             align-items: center;
             border: 1px solid rgb(36, 36, 36);
             margin-left: 12%;
+            i{
+                color: white;
+                background-color: rgb(36, 36, 36); 
+            }
         }
 
         .in {
             background-color: rgb(16, 16, 16);
             width: 90%;
             height: 100%;
-            border-radius: 15px;
+            border-radius: 20px;
             border: none;
             outline: none;
             padding: 0 0 0 5px;
@@ -107,9 +96,9 @@
             /* position: absolute;
             top: 0;
             left: 70%; */
-            width: 42px;
-            height: 42px;
-            /* background-color: rgb(16, 16, 16); */
+            width: 41px;
+            height: 41px;
+            background-color: rgb(36, 36, 36);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -119,7 +108,7 @@
         }
 
         .mic:hover {
-            background-color: rgb(36, 36, 36);
+            background-color: gray;
         }
 
         .topbar {
@@ -129,6 +118,7 @@
             display: flex;
             justify-content: start;
             align-items: center;
+
         }
 
         .bottombar {
@@ -146,8 +136,8 @@
             justify-content: center;
             align-items: center;
             font-size: 25px;
-            margin-left: 15px;
-
+            /* margin-left: 10px; */
+            /* padding: 10px; */
             i {
                 color: red;
             }
@@ -157,7 +147,6 @@
             display: flex;
             justify-content: start;
             align-items: center;
-            margin: 5px;
             padding: 10px;
             border-radius: 10px;
             color: white;
@@ -166,9 +155,13 @@
                 margin-right: 25px;
             }
         }
+        i{
+            cursor: pointer;
+        }
 
         .common:hover {
-            background-color: gray;
+            background-color: rgb(36, 36, 36);
+            cursor: pointer;
         }
 
         .totalside {
@@ -178,30 +171,35 @@
         }
 
         .block {
-            border-bottom: 2px solid black;
+            border-bottom: 2px solid rgb(37, 37, 37);
             /* margin-bottom: 15px; */
-            padding: 5px;
+            padding: 10px;
+            p{
+                color: white;
+            }
         }
 
-        .fav {
+        .nav{
             display: flex;
-
+            justify-content: center;
+            align-items: center;
             p {
-                background-color: rgba(56, 56, 56, 0.39);
-                padding: 5px 15px;
+                background-color: rgb(36, 36, 36);
                 border-radius: 10px;
-                margin: 10px;
+                margin-left: 15px;
+                height: 15px;
                 color: white;
-
+                text-align: center;
+                padding: 10px;
+                font-size: 15px;
             }
         }
 
         .child {
             width: 84%;
-            height: 80%;
-            /* background-color: blue; */
+            height: 85%;
             background-color: rgb(16, 16, 16);
-            top: 20%;
+            top: 16%;
             right: 0;
             position: fixed;
             display: flex;
@@ -211,10 +209,10 @@
         }
 
         .videos {
-            width: 300px;
-            height: 250px;
-            background-color: black;
-            margin: 10px;
+            width: 370px;
+            height: 300px;
+            background-color: rgb(16, 16, 16);
+            margin: 8px;
             border-radius: 10px;
             cursor: pointer;
         }
@@ -236,31 +234,66 @@
             opacity: 0.5;
             font-weight: 300;
         }
-
-        .dots {
-            margin: 5px;
-
-        }
-
         .topicons {
             color: white;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             position: fixed;
-            right: 10px;
-            gap: 15px;
-            font-size: 20px;
-
+            right: 35px;
+            gap: 10px;
+            font-size: 18px;
+            
         }
 
         .icon {
-            padding: 10px;
+            padding: 11px;
         }
 
         .icon:hover {
-            background-color: gray;
+            background-color:rgb(36, 36, 36);
+            border-radius: 50px;
+        }
+        .create{
+            color: white;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(36, 36, 36);
+            align-items: center;
+            border: 2px solid rgb(36, 36, 36);
+            font-size: 18px;
+            padding: 8px;
             border-radius: 25px;
+            margin-left: 13%;
+            i{
+                padding-right: 10px;
+            }
+        }
+        .glass{
+            height: 100%;
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(36, 36, 36);
+            border-radius: 0 20px 20px 0;
+        }
+        .ic1{
+            background-color: rgb(36, 36, 36);
+            border-radius: 25px;
+        }
+        .dotsbox{
+            width: 35px;
+            height: 35px;
+            margin: 10px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+        }
+        .dotsbox:hover{
+            background-color: rgb(36, 36, 36);
         }
     </style>
 </head>
@@ -270,33 +303,46 @@
         <div class="top">
             <div class="topbar">
                 <div class="search">
-                    <form action="" class="in">
-                        <input type="text" name="" id="" class="in" placeholder="search your input">
+                    <form action="https://www.youtube.com/results" class="in">
+                        <input type="text" name="search_query" id="" class="in" placeholder="search">
                     </form>
+                    <div class="glass">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </div>
 
                 <div class="mic">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
                 <div class="topicons">
+                <div class="create">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Create</p>
+                </div>
                     <i class="fa-solid fa-bell icon"></i>
-                    <i class="fa-regular fa-user icon"></i>
+                    <i class="fa-regular fa-user icon ic1"></i>
                 </div>
             </div>
             <div class="bottombar">
-                <div class="fav">
+                <div class="nav">
                     <p>All</p>
                     <p>Music</p>
                     <p>Games</p>
                     <p>Movies</p>
                     <p>Anime</p>
                     <p>vlogs</p>
-                    <!-- <p>Minecraft modding</p> -->
+                    <p>Minecraft modding</p>
                     <p>Entertiment</p>
                     <p>Cooking</p>
                     <p>Sports</p>
                     <P>Tvshows</P>
                     <p>minecraft</p>
+                    <p>Tamil cinemas</p>
+                    <p>Hypixel</p>
+                    <p>Anirudh</p>
+                    <p>Dramedy</p>
+                    <p>Watched</p>
+                    <p>New to you</p>
                 </div>
             </div>
 
@@ -351,7 +397,11 @@
 
         <div class="side">
             <div class="sidetop">
-                <i class="fa-solid fa-bars dots"></i>
+                <div class="dotsbox">
+                    <i class="fa-solid fa-bars dots"></i>
+                </div>
+                
+
                 <div class="com">
                     <i class="fa-brands fa-youtube"></i>
                     <p>Youtube</p>
@@ -364,12 +414,12 @@
                         <p>Home</p>
                     </div>
                     <div class="common">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                        <i class="fa-solid fa-bolt"></i>
+                        <p>Shorts</p>
                     </div>
                     <div class="common">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                        <i class="fa-solid fa-clapperboard"></i>
+                        <p>Subscription</p>
                     </div>
                 </div>
                 <div class="block">
@@ -380,55 +430,91 @@
                     </div>
 
                     <div class="common">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <p>History</p>
                     </div>
                     <div class="common">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                        <i class="fa-solid fa-list"></i>
+                        <p>Playlists</p>
                     </div>
                     <div class="common">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                        <i class="fa-brands fa-youtube"></i>
+                        <p>Your Videos</p>
                     </div>
                     <div class="common">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                        <i class="fa-regular fa-clock"></i>
+                        <p>Watch later</p>
                     </div>
                     <div class="common">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <p>Liked videos</p>
                     </div>
                 </div>
                 <div class="block">
                     <div class="common">
                         <h3>
-                            you >
+                            Explore
                         </h3>
                     </div>
-
                     <div class="common">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p>Shopping</p>
                     </div>
                     <div class="common">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                        <i class="fa-solid fa-music"></i>
+                        <p>Music</p>
                     </div>
                     <div class="common">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                        <i class="fa-solid fa-film"></i>
+                        <p>Movies</p>
                     </div>
                     <div class="common">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                        <i class="fa-solid fa-tower-broadcast"></i>
+                        <p>Live</p>
                     </div>
                     <div class="common">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                        <i class="fa-solid fa-gamepad"></i>
+                        <p>Gaming</p>
+                    </div>
+                    <div class="common">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <p>News</p>
+                    </div>
+                    <div class="common">
+                        <i class="fa-solid fa-trophy"></i>
+                        <p>Sports</p>
+                    </div>
+                    <div class="common">
+                        <i class="fa-solid fa-podcast"></i>
+                        <p>Podcast</p>
+                    </div> 
+                </div> 
+                <div class="block">
+                    <div class="common">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Settings</p>
+                    </div>
+                    <div class="common">
+                        <i class="fa-solid fa-flag"></i>
+                        <p>Report history</p>
+                    </div>
+                    <div class="common">
+                        <i class="fa-solid fa-circle-question"></i>
+                        <p>Help</p>
                     </div>
                 </div>
-
+                <div class="block">
+                    <div class="common">
+                        <h5>About Press Copyright Contact us Creators Advertise Developers</h5>
+                    </div>
+                    <div class="common">
+                        <h5>Terms Privacy Policy & SafetyHow YouTube worksTest new features</h5>
+                    </div>
+                    
+                    <div class="common"></div>
+                    <div class="common"></div>
+                    <div class="common"></div>
+                </div>
             </div>
         </div>
     </div>
